@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>NIKE Elite Crew — Men's Socks</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+
+<div class="progress" id="progress"></div>
+<div class="ticker" id="ticker"><div class="ticker__track" id="tickerTrack"></div></div>
+
+<header class="nav" id="nav">
+  <a class="nav__logo" href="#" aria-label="Nike">
+    <svg viewBox="0 0 24 8" aria-hidden="true"><path d="M23.7.3 6.2 7.8C4.7 8.4 3.5 8.7 2.5 8.7 1.3 8.7.5 8.2.2 7.3 0 6.7 0 6 .3 5.2.6 4.4 1 3.7 1.7 2.9c-.3.6-.6 1.5-.2 2.2.3.5.9.8 1.8.8.7 0 1.5-.2 2.4-.5L23.7.3Z"/></svg>
+  </a>
+  <nav class="nav__links" id="navLinks">
+    <a href="#build">Build</a>
+    <a href="#tech">Tech</a>
+    <a href="#shop">Shop</a>
+    <a href="#hype">Hype</a>
+  </nav>
+  <div class="nav__right">
+    <button class="nav__menu" id="menuBtn" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+    <button class="bag" id="bag" aria-label="Open bag"><span>Bag</span><b id="bagCount">0</b></button>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__glow hero__glow--a"></div>
+    <div class="hero__glow hero__glow--b"></div>
+    <div class="hero__grid"></div>
+
+    <div class="hero__copy">
+      <span class="eyebrow"><i></i> New — Elite Crew Pack</span>
+      <h1 class="mega">
+        <span class="mega__line" style="--d:0">YOUR</span>
+        <span class="mega__line mega__line--fill" style="--d:1">FEET</span>
+        <span class="mega__line" style="--d:2">DESERVE</span>
+        <span class="mega__line mega__line--out" style="--d:3">BETTER</span>
+      </h1>
+      <p class="hero__sub">Max-cushion crew socks engineered for men who don't sit down. Dri-FIT sweat control, targeted arch compression, and colour that refuses to be ignored.</p>
+      <div class="hero__cta">
+        <a class="btn btn--volt" href="#build">Build your pack</a>
+        <a class="btn btn--ghost" href="#tech">See the tech</a>
+      </div>
+      <ul class="hero__stats">
+        <li><b>4.9</b><span>12,408 reviews</span></li>
+        <li><b>38%</b><span>more cushion</span></li>
+        <li><b>0</b><span>blisters, promise</span></li>
+      </ul>
+    </div>
+
+    <div class="hero__art">
+      <div class="blob"></div>
+      <div class="sock-wrap" id="heroSock"></div>
+      <div class="price-tag"><small>from</small><b>$28</b><small>/ 3-pack</small></div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-clip">
+    <div class="marquee">
+      <div class="marquee__track" id="marqueeTrack"></div>
+    </div>
+  </div>
+
+  <!-- BUILD / CONFIGURATOR -->
+  <section class="section build" id="build">
+    <header class="sec-head reveal">
+      <span class="eyebrow"><i></i> Step 01 — Colourway</span>
+      <h2 class="display sec-title">Pick your <em>poison</em></h2>
+      <p class="sec-sub">Six colourways. Loud by default. Tap one and watch it flip.</p>
+    </header>
+
+    <div class="build__grid">
+      <div class="build__stage reveal">
+        <div class="stage__rings"></div>
+        <div class="stage__name display" id="cwName">Volt Strike</div>
+        <div class="stage__pair">
+          <div class="stage__sock" id="stageSockA"></div>
+          <div class="stage__sock stage__sock--b" id="stageSockB"></div>
+        </div>
+      </div>
+
+      <div class="build__panel reveal">
+        <div class="panel__row">
+          <h3 class="panel__label">Colourway</h3>
+          <div class="swatches" id="swatches"></div>
+        </div>
+
+        <div class="panel__row">
+          <h3 class="panel__label">Size</h3>
+          <div class="sizes" id="sizes"></div>
+        </div>
+
+        <div class="panel__row">
+          <h3 class="panel__label">Pack</h3>
+          <div class="packs" id="packs"></div>
+        </div>
+
+        <div class="panel__total">
+          <div>
+            <small>Total</small>
+            <b class="display" id="total">$28</b>
+          </div>
+          <button class="btn btn--volt" id="addBtn">Add to bag</button>
+        </div>
+        <p class="panel__note">Free returns · Ships in 2 days · <span id="stock">312</span> left in this colourway</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECH -->
+  <section class="section tech" id="tech">
+    <header class="sec-head reveal">
+      <span class="eyebrow"><i></i> Step 02 — The engineering</span>
+      <h2 class="display sec-title">Not just <em>fabric</em></h2>
+    </header>
+
+    <div class="cards">
+      <article class="card card--volt reveal">
+        <span class="card__num display">01</span>
+        <h3 class="display">Max cushion<br>footbed</h3>
+        <p>A 4.2mm terry-loop deck under the heel and ball of the foot. Absorbs the impact your shoes pretend to.</p>
+      </article>
+      <article class="card card--pink reveal">
+        <span class="card__num display">02</span>
+        <h3 class="display">Dri-FIT<br>sweat engine</h3>
+        <p>Moisture pulled off the skin and pushed out through mesh vent channels along the arch.</p>
+      </article>
+      <article class="card card--cyan reveal">
+        <span class="card__num display">03</span>
+        <h3 class="display">Arch lock<br>compression</h3>
+        <p>A band of 18% spandex wraps the midfoot so the sock never slides, bunches, or eats your heel.</p>
+      </article>
+      <article class="card card--orange reveal">
+        <span class="card__num display">04</span>
+        <h3 class="display">Left / right<br>anatomical</h3>
+        <p>Knit to the shape of an actual foot. There is a left one and a right one, and you will feel it.</p>
+      </article>
+    </div>
+
+    <div class="specs reveal">
+      <div><small>Cushion</small><b class="display">4.2mm</b></div>
+      <div><small>Cotton blend</small><b class="display">62%</b></div>
+      <div><small>Cuff height</small><b class="display">Crew</b></div>
+      <div><small>Wash cycles</small><b class="display">100+</b></div>
+      <div><small>Sizes</small><b class="display">M–XXL</b></div>
+    </div>
+  </section>
+
+  <!-- SHOP -->
+  <section class="section shop" id="shop">
+    <header class="sec-head reveal">
+      <span class="eyebrow"><i></i> Step 03 — Stock up</span>
+      <h2 class="display sec-title">Shop the <em>drop</em></h2>
+      <p class="sec-sub">Every pack ships with three pairs. Mix them or match them.</p>
+    </header>
+    <div class="products" id="products"></div>
+  </section>
+
+  <!-- HYPE -->
+  <section class="section hype" id="hype">
+    <header class="sec-head reveal">
+      <span class="eyebrow"><i></i> Step 04 — Receipts</span>
+      <h2 class="display sec-title">They don't <em>shut up</em> about them</h2>
+    </header>
+    <div class="quotes" id="quotes"></div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="cta__inner reveal">
+      <h2 class="display cta__title">Just<br>wear it.</h2>
+      <p>Three pairs. Twenty-eight dollars. Zero excuses left.</p>
+      <div class="hero__cta">
+        <a class="btn btn--pink" href="#build">Build your pack</a>
+        <a class="btn btn--ghost" href="#shop">Browse the drop</a>
+      </div>
+    </div>
+    <div class="cta__socks" id="ctaSocks"></div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer__top">
+    <svg class="footer__logo" viewBox="0 0 24 8" aria-hidden="true"><path d="M23.7.3 6.2 7.8C4.7 8.4 3.5 8.7 2.5 8.7 1.3 8.7.5 8.2.2 7.3 0 6.7 0 6 .3 5.2.6 4.4 1 3.7 1.7 2.9c-.3.6-.6 1.5-.2 2.2.3.5.9.8 1.8.8.7 0 1.5-.2 2.4-.5L23.7.3Z"/></svg>
+    <div class="footer__cols">
+      <div><h4>Shop</h4><a href="#shop">Crew socks</a><a href="#shop">No-show</a><a href="#shop">Ankle</a><a href="#shop">Bundles</a></div>
+      <div><h4>Help</h4><a href="#">Sizing guide</a><a href="#">Shipping</a><a href="#">Returns</a><a href="#">Contact</a></div>
+      <div><h4>Company</h4><a href="#">About</a><a href="#">Sustainability</a><a href="#">Careers</a><a href="#">Press</a></div>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <span>© 2026 — Concept page, not affiliated with Nike, Inc.</span>
+    <span>Built on Railway</span>
+  </div>
+</footer>
+
+<div class="scrim" id="scrim" hidden></div>
+<aside class="drawer" id="drawer" aria-hidden="true" aria-label="Bag">
+  <header class="drawer__head">
+    <h2 class="display">Bag</h2>
+    <button class="drawer__close" id="closeBag" aria-label="Close bag">×</button>
+  </header>
+  <div class="drawer__items" id="bagItems"></div>
+  <footer class="drawer__foot">
+    <div>
+      <small>Total</small>
+      <b class="display" id="bagTotal">$0</b>
+    </div>
+    <button class="btn btn--volt" id="checkout">Checkout</button>
+  </footer>
+</aside>
+<div class="toast" id="toast" hidden></div>
+
+<script type="module" src="/main.js"></script>
+</body>
+</html>
